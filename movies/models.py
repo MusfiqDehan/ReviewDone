@@ -20,7 +20,6 @@ class Rating(models.Model):
 class Movie(models.Model):
     title = models.CharField(max_length=128)
     description = models.TextField()
-    image_path = models.TextField()
     upload_image = models.ImageField(
         upload_to='images/', blank=True, null=True)
     watch_link = models.URLField(max_length=255)
