@@ -1,0 +1,22 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<div class="area">
+    <div class="row">
+        {% for movie in movies %}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+                <img src="/media/{{ movie.upload_image }}" style="width: 256px;" class="card-img-top"
+                    alt="movie-poster">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }} ({{ movie.release_year }})</h5>
+                    <p class="card-text">{{ movie.genre }}</p>
+                    <p class="card-text">{{ movie.rating }}</p>
+                    <a href="/movies/{{ movie.id }}" class="btn btn-primary">View</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
