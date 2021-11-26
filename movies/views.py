@@ -12,3 +12,11 @@ def index(request):
         'movies': movies,
     }
     return render(request, 'movies/index.html', context)
+
+
+def home(request):
+    '''
+    View function for home page
+    '''
+    context = {}
+    return render(request, 'movies/home.html', context)
